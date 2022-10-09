@@ -1,3 +1,0 @@
-# sentiment_analysis
-
-HELLO
