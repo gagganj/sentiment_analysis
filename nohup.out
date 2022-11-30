@@ -1,0 +1,611 @@
+Unable to init server: Could not connect: Connection refused
+Unable to init server: Could not connect: Connection refused
+
+(dirperc.py:3767279): Gdk-CRITICAL **: 11:40:09.393: gdk_cursor_new_for_display: assertion 'GDK_IS_DISPLAY (display)' failed
+Unable to init server: Could not connect: Connection refused
+Unable to init server: Could not connect: Connection refused
+
+(runoncp.py:4012463): Gdk-CRITICAL **: 15:22:51.624: gdk_cursor_new_for_display: assertion 'GDK_IS_DISPLAY (display)' failed
+Traceback (most recent call last):
+  File "runoncp.py", line 8, in <module>
+    import seaborn as sns
+ModuleNotFoundError: No module named 'seaborn'
+Unable to init server: Could not connect: Connection refused
+Unable to init server: Could not connect: Connection refused
+
+(runoncp.py:4012489): Gdk-CRITICAL **: 15:23:39.106: gdk_cursor_new_for_display: assertion 'GDK_IS_DISPLAY (display)' failed
+Traceback (most recent call last):
+  File "runoncp.py", line 8, in <module>
+    import seaborn as sns
+ModuleNotFoundError: No module named 'seaborn'
+Traceback (most recent call last):
+  File "runoncp.py", line 1, in <module>
+    import numpy as np
+ModuleNotFoundError: No module named 'numpy'
+Traceback (most recent call last):
+  File "runoncp.py", line 6, in <module>
+    import tensorflow as tf
+ModuleNotFoundError: No module named 'tensorflow'
+Unable to init server: Could not connect: Connection refused
+Unable to init server: Could not connect: Connection refused
+
+(runoncp.py:4018679): Gdk-CRITICAL **: 18:47:27.920: gdk_cursor_new_for_display: assertion 'GDK_IS_DISPLAY (display)' failed
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/usr/lib/python3/dist-packages/sklearn/model_selection/_validation.py:532: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+KeyError: 'log_loss'
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+(106412, 17719) (45606, 17719) (106412,)
+the best parameters are: {'criterion': 'gini', 'max_depth': 150, 'max_features': 'sqrt', 'n_estimators': 200}
+accuracy: 47.43016269789063%
