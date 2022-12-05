@@ -1,0 +1,339 @@
+\documentclass{article}
+
+% if you need to pass options to natbib, use, e.g.:
+% \PassOptionsToPackage{numbers, compress}{natbib}
+% before loading nips_2016
+%
+% to avoid loading the natbib package, add option nonatbib:
+% \usepackage[nonatbib]{nips_2016}
+
+\PassOptionsToPackage{numbers,sort&compress}{natbib}
+\usepackage[final]{nips_2016} % produce camera-ready copy
+
+\usepackage[utf8]{inputenc} % allow utf-8 input
+\usepackage[T1]{fontenc}    % use 8-bit T1 fonts
+\usepackage{hyperref}       % hyperlinks
+\usepackage{url}            % simple URL typesetting
+\usepackage{booktabs}       % professional-quality tables
+\usepackage{amsfonts}       % blackboard math symbols
+\usepackage{nicefrac}       % compact symbols for 1/2, etc.
+\usepackage{microtype}      % microtypography
+\usepackage{graphicx}
+\usepackage{wrapfig}
+% Add extra packages here, e.g.: 
+\usepackage{amsfonts, amsmath, amssymb, amsthm}
+\usepackage{listings,color}
+\usepackage{xurl}
+\usepackage{animate}
+\usepackage{subcaption}
+\usepackage[normalem]{ulem}
+\useunder{\uline}{\ul}{}
+\usepackage{titlesec}
+\setcounter{secnumdepth}{4}
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+\usepackage{float}
+
+\usepackage{wrapfig}
+\usepackage{caption}
+\captionsetup[figure]{font=scriptsize}
+
+
+\title{A Brief Analysis of the Application of Different Pre-processing methods and Neural Networks to the Sentiment Classification of Movie Reviews}
+
+% The \author macro works with any number of authors. There are two
+% commands used to separate the names and addresses of multiple
+% authors: \And and \AND.
+%
+% Using \And between authors leaves it to LaTeX to determine where to
+% break the lines. Using \AND forces a line break at that point. So,
+% if LaTeX puts 3 of 4 authors names on the first line, and the last
+% on the second line, try using \AND instead of \And before the third
+% author name.
+
+\author{
+  s1712247\\
+  %% examples of more authors
+  \And
+  s1867849\\
+ \And
+  s1910176\\
+}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+ This report applies different pre-processing and neural network learning methods to analyse which is best for the sentiment prediction of movie reviews. We focus on the optimum encoding method for accurate prediction. The highest performing encoding was found to be a count vector, which displays the best overall performance when paired with a CNN. We analyse and critically discuss our findings.
+\end{abstract}
+\section{Introduction}
+Sentiment analysis of movie reviews is a hugely effective tool for gauging the opinion of the audience. \cite{10.1145/3302425.3302469}
+In turn, the general opinion of the populous is often a decisive factor in a person's decision to watch a movie. More generally, in our digital, social-media-run world, the knowledge of people's opinions is an exceedingly valuable currency. A less obvious example than movie reviews is sentiment analysis used in the financial industry - where it is employed to analyze news and other media to determine whether it is positive or negative, faster than any individual could, allowing for a competitive advantage.
+
+This report explores and analyses the use of multiple prepossessing and neural network methods to discern sentiment using only text from the review. There are numerous studies with similar questions, for instance \cite{10.1145/3302425.3302469} \cite{chaudhary_2020} \cite{unknown31}, which each use the same or similar data sets.
+
+Our data is from  the Stanford Sentiment Treebank (SST) \cite{socher-etal-2013-recursive}. It contains 10605 original snippets from Rotten Tomatoes movie reviews; a dictionary file, containing 239232 phrases parsed by the Stanford Parser from the original snippets; and a sentiment labels file, giving the human-allocated continuous sentiment number (floats between 0. and 1.) corresponding to each phrase in the dictionary. We convert the sentiment scores into classes: Very Negative, Negative, Neutral, Positive and Very Positive; and hence convert the problem into one of ordinal classification.
+
+\section{Cleaning the Corpus}
+Before implementing any pre-processing or learning methods, we converted the entire original snippets and dictionary corpora to lowercase and removed all special characters, punctuation and numbers. Additionally, using the Natural Language Toolkit library \cite{rehurek_lrec}, we removed all 'stop words' (the, and, I, etc) and lemmatized each individual word in the corpus. Lemmatizing in this case means to convert a word to its grammatical root (for instance, the root of "builds" and "built" is "build".) By cleaning in this way, we aimed to remove from the data as much unhelpful "noise" as possible, to capture the sentiment of a review more easily. By removing vocabulary such as stop words, however, we do risk losing contextual information that could help encode semantic meaning.
+\section{Exploratory Data Analysis}
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=8cm]{wordcloud.png}
+    \caption{ A word cloud showing the most used words inside the movie reviews data set. }
+    \label{fig:word_cloud}
+\end{figure}
+The clean dictionary is now a data frame with 149902 rows and 2 columns: phrase, and sentiment category. Some of the most common words can be spotted in figure \ref{fig:word_cloud}. It is apparent that although the most common words contain little intrinsic sentiment, some words that cause a semantic shift are still extremely common. Not only that, Table 1 suggests the even most common words among different sentiment classes have a small but distinct sentiment correlation.
+\begin{table}[!ht]
+\centering
+\begin{tabular}{lccccc}
+\quad  & \textbf{1st} & \textbf{2nd} & \textbf{3rd} & \textbf{4th} & \textbf{5th} \\
+\textbf{Very negative:} & Like                 & Bad                  & Character            & Time                 & Minute               \\
+\textbf{Negative:}      & Like                 & Character            & Story                & Much                 & Time                 \\
+\textbf{Neutral:}       & Like                 & Story                & Character            & Time                 & Make                 \\
+\textbf{Positive:}       & Good                 & Make                 & Character            & Story                & Like                 \\
+\textbf{Very Positive}   & Performance          & Good                 & Best                 & Well                 & Funny               
+\end{tabular}
+\caption{The 5 most commonly used words (after "movie, "film" and "one" were removed) for each sentiment class.}
+\label{word_table}
+\end{table}
+
+\begin{wrapfigure}{r}{0.4\textwidth}
+    \centering
+    \includegraphics[width=8cm]{word freq dist.png}
+    \caption{Frequency distributions of words in dictionary corpus (right) and the original review corpus (left).}
+    \label{fig:freq_dist}
+\end{wrapfigure}
+Plotting the frequency distribution of words in both the dictionary corpus and the original snippets.
+Figure \ref{fig:freq_dist} shows the word frequency distributions of both (clean) corpora. As one might expect, the original snippets follow the general rule for word, frequency in large bodies of text - most of the corpus is made up of highly infrequent words, those appearing between 1 and 10 times, with a few highly common ones. The parsed dictionary file contains a lot of repeats of subphrases, and thus has a large majority of words appearing between 10 and 100 times.
+\section{Data Pre-processing - Encoding Phrases}
+\subsection*{Count Vector Encoding}
+One of the most basic bag-of-words encoding methods is count vector encoding. This means converting each phrase in the dictionary to a vector with a dimension equal to the number of different words in the entire dictionary. In each phrase vector, an entry is the number of times the corresponding word appears in the given phrase. The matrix made up of these count vectors is often termed a "sparse matrix", as by nature it contains mostly zeros. The resultant matrix encoding has dimensions (152018 x 17719).
+\subsection*{TF-IDF}
+A second bag-of-words method we used to encode the data was by term frequency inverse document frequency (TF-IDF) scores. The score for each word is calculated as
+$$
+\text{TF}(\text{word}, \text{phrase}) * \text{IDF}(\text{word})
+$$
+where
+$$
+\text{TF}(\text{word}, \text{phrase}) = \frac{(\text{word's frequency in the phrase})}{(\text{number of words in the phrase})} \text{[ref 23]}\\
+$$
+$$
+    \text{IDF}(\text{word}) = \ln \left(1 + \frac{(\text{total number of phrases})}{(\text{number of phrases containing word})}\right)
+$$
+This technique embeds the \textbf{relative} frequency of a word in a phrase - thus giving less weight to higher frequency words and more weight to those of lower frequency in the embedding. The embedding uses the top 8000 most frequent words in the corpus to encode phrases - thus the shape of the resultant encoded array has dimensions (149901 x 8000).
+\subsection*{Word2Vec}
+\begin{wrapfigure}{r}{0.4\textwidth}
+    \includegraphics[width=5cm]{w2v_kmeans.png}
+    \includegraphics[width=5cm]{w2v_similarity_freq.png}
+    \caption{Top, clusterng by Kmeans of the word2vec encoded data. Bottom, number of words for which it's one of the top ten similar, plotted against that word's frequency in the corpus.}
+    \label{fig:w2v_freq}
+\end{wrapfigure}It is a known fact in the field of computational linguistics that a word's contextual information gives a decent approximation of its semantic meaning. This is because semantically similar words normally appearing in similar contexts\cite{baroni-etal-2014-dont}. Word2vec takes advantage of this fact by using a words contextual "window" to encode it as a vector. This vector is made up of weights tuned in a training process such that word vectors with greater semantic similarity have a lesser distance between them in hyperspace. Using the package Gensim\cite{word2vec model}, we trained a Word2vec model on the text file of original, un-parsed review snippets in order to maximise contextual information given to the algorithm. According to \cite{DBLP:journals/corr/LisonK17}, greater accuracy is achieved for short input texts when the contextual window for each word appraised by the algorithm is small. We used the Continuous Bag of Words (CBOW) Word2vec method over Skip-gram, as its faster and more reliable for large data sets\cite{DBLP:journals/corr/MikolovLS13}. It was noticed that the presence of a few very high frequency words (such as "film" and "movie") were appearing in context of so many words that many were being encoding being encoded as similar regardless of semantic meaning. To combat this, the top 50 most frequent words in the corpus were also removed before training. Additionally, our model only contains words that appear in the corpus at least 5 times - this is because words appearing too few times simply become noise in the data. A shortfall of removing these words from the model is that a lot of information is lost. As seen in figure \ref{fig:freq_dist}, words appearing under 5 times make up around two thirds of the vocab in the original snippets corpus, and removing high frequency words such as "good" and "well" gets rid of potentially important semantic information from many individual reviews. To get phrase encodings, we sum over all the word vectors in said phrase. This study \cite{inbook} shows that summing word vectors gives better performance than any other basic operation. We encode 500 features for each word (and thus each phrase), and include all phrases containing at least one word from the model. We ran the model for 4 iterations, as we found that for any more than that we saw overtraining - in the form of all similarity scores being exceedingly high. The resulting matrix is a (207188 x 500).
+
+% We ran the model for 4 iterations (epoch=3), as we found that for any more than that we saw overtraining - in the form of all similarity scores being very high. 
+As semantic word embedding is an unsupervised process, it is difficult to evaluate its performance for a specific data set - however, we can examining the output of the resultant model. At first we see some promising results, for instance, among the closest vectors to "kiss" was "romantic". However, despite clearly a small amount of semantic information being stored, and despite removing high frequency words, we still see a clear correlation between a words frequency in the overall corpus and its similarity score to other words (see Figure \ref{fig:w2v_freq}.) 
+
+We clustered the data into five groups using Kmeans from scikitlearn \cite{scikit-learn}, see Figure \ref{fig:w2v_freq}. We see very little correlation between how the Kmeans model clusters the phrases, and their sentiment labels, with the exception of most of "cluster 2" belonging to the "very negative" category. This could suggest that very little semantic information has been encoded, and warns against the use of clustering classifying methods like K-Nearest-Neighbours (KNN), used for text sentiment classification in literature \cite{unknown31}\cite{chaudhary_2020}.
+
+\subsection*{Visualisation}
+Having projected the three encodings down into two dimensions using UMAP \cite{https://doi.org/10.48550/arxiv.1802.03426}, see figure \ref{fig:UMAP}, we see very little to no evidence of class separation for any pre-processing method. Some small micro clusters of same sentiment appear in the projection of TF-IDF, even fewer for the count array and none for Word2vec. All the encodings seem to be quite normally distributed - Word2vec the most and TF-IDF the least. Based on this observation, and our earlier analysis, one might reasonably suggest that distance from the center in the Word2vec plot correlates strongly with frequency in the text. The TF-IDF encoding seems to be the most tightly grouped in general, and forms the most distinct shape - followed by the count encoding. We might expect that these encodings contain more information than Word2vec going into the training phase. What we see here suggests a method like KNN would be ill-suited to our task - or certainly these particular encodings.
+
+\begin{figure}
+     \centering
+     \begin{subfigure}[b]{0.32\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{UMAP count.png}\hspace{0cm}
+         \caption{Count Array}
+         \label{fig:UMAPa}
+     \end{subfigure}
+     \begin{subfigure}[b]{0.32\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{UMAP tfidf.png}\hspace{-0.1cm}
+         \caption{TF-IDF}
+         \label{fig:UMAPb}
+     \end{subfigure}
+     \begin{subfigure}[b]{0.32\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{UMAP wv2.png}
+         \caption{Word2vec}
+         \label{fig:UMAPc}
+     \end{subfigure}
+        \caption{UMAP projections of the encoding created by each preprocessing method.}
+        \label{fig:UMAP}
+\end{figure}
+
+\section{Sentiment Classification - Neural Network Prediction}
+
+\subsection*{Methods}
+
+All models mentioned below were trained via Keras\cite{chollet2015keras} and Tensorflow\cite{tensorflow2015-whitepaper} packages, using 20\% testing-training split and a 30\% validation split. All models were tuned to the same hyperparameters for each encoding, to ensure a consistent and fair comparison between preprocessing methods, even if some of the models could have been tailored further to perform better. For each method an "adam" optimiser was used. 
+\subsubsection*{Dense Neural Network}
+A dense neural network is feed-forward perceptron, where every node is fully (densely) interconnected. Input is passed through a series of hidden layers of densely connected nodes to compute an output\cite{silge_2022}.
+These models are highly prone to overtraining, and thus regularisers and dropouts often have to be used to reduced. We trained the model for 20 epochs.
+\subsubsection*{1D Convolution Neural Network}
+Convolutional Neural Networks (CNNs) are highly effective for computer vision and speech recognition\cite{Cai2019AnalysisOT}, due to their ability to learn generalised features of data and recognise long term dependencies\cite{chaudhary_2020} lack of sensitivity to small perturbations in input. They have also been widely used in the field on text sentiment analysis \cite{wang-etal-2016-combination}\cite{Cai2019AnalysisOT}\cite{10.1007/978-3-030-67537-0_19}\cite{xue-li-2018-aspect}. The network structure is as follows. Features of phrases are learnt by applying a "filter" vector to every possible contextual window of the phrase, producing a \textit{feature map}; then applying a "max pooling layer", which combines close values in the feature map by representing them as their common maximum. The model aims to capture the most "influential" feature for each phrase's feature map \cite{Cai2019AnalysisOT}, with the pooling layer in place to create a robustness to small input perturbations. Due to its very large computational cost, our CNN was only trained for 10 epochs, less than that required for full optimisation.
+\subsubsection*{Other Neural Networks}
+Although found later to be sub-optimal for our specific task in terms of achieved accuracy and processing time, we have implemented both a Reccurent Neural Network (RNN) and a Long Short Term Memory network (LSTM) on the data. An RNN captures sequential information\cite{chaudhary_2020} by computing an output, not only using the corresponding input phrase, but also the output of all previous phrases. An LSTM network works similarly, but at each iteration updates long and short term memory values based on previous outputs and the current input. Using these values combined with the current input, the LSTM computes the corresponding output. Both RNNs and LSTMs are used for text sentiment analysis in literature\cite{10.1145/3302425.3302469}\cite{article33}\cite{10.1007/978-3-030-67537-0_19}\cite{DBLP:journals/corr/RuderGB16}.
+\subsection*{Results}
+We have used categorical crossentropy to evaluate all our models, as we have categorical data with multiple classes\cite{gómez}.
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=12cm]{matrices.png}
+    \caption{ all of the confusion matrices}
+    \label{fig:matrices}
+\end{figure}
+\begin{table}[!ht]
+\centering
+\begin{tabular}{lll}
+\textbf{Method} & \textbf{Training accuracy} & \textbf{Training accuracy} \\
+Count CNN       & 60.39\%                    & 54.75\%                       \\
+Count Dense     & 64.69\%                    & 52.21\%                       \\
+TF-IDF CNN      & 59.397\%                   & 53.41\%                       \\
+TF-IDF Dense    & 63.85\%                    & 51.08\%                       \\
+Word2Vec CNN    & 46.12\%                    & 46.18\%                       \\
+Word2Vec Dense  & 47.56\%                    & 47.66\%
+\end{tabular}
+\label{table:results}
+\caption{The training accuracy, and evaluation accuracy after hyperparameter tuning, for each preproccessing and learning method.}
+\end{table}
+
+% count vector:
+% Overall accuracy for training dataset: 76.58
+% Overall accuracy for testing dataset: 41.81
+
+% after adaptations (dropouts, reguarisers,less complex): 
+% Overall accuracy for training dataset: 64.68
+% Overall accuracy for testing dataset: 52.21
+The results of our trained models can be seen in figure \ref{fig:matrices} amd Table 2. The count array combined with the CNN was the most effective, with a confusion matrix the closest to diagonal and an evaluation accuracy of 54.75\%. Along with higher accuracy the CNN confusion matrix shows that it was able to categorize neutral especially well, at 82\%. The count array with the dense neural network and TF-IDF with the CNN also performed admirably. The TF-IDF encoding was clearly also an effective way to encode the phrases, as it performed similarly to the count vector.
+
+The Word2Vec model consistently had the lowest accuracy of all encoding methods. Both of the confusion matrices were vertical with the CNN classifying everything as neutral, and accuracy scores were significantly the lowest.
+
+Throughout, every method combination finds negative sentiment harder to classifying then postive - and 'extreme' sentiment far harder than that more neutral.
+
+To successfully evaluate a model's performance we must also consider the model's overtraining and not just the testing accuracy. This is important to consider when choosing a model as a model that has overfitted on training data will struggle to classify new data correctly. A measure of overtraining can be visualised by the amount of diversion in the loss curves in \ref{fig:loss} but is also apparent in the difference in the testing and training accuracy values. The least overtrained models were those which were performed on the Word2Vec encoding. This is not surprising as we see this model failed to learn sentiment. The most overtrained models were the dense models applied on the count vector-encoding and TF-IDF. This is expected considering the nature of a densely connected network.
+
+%Tuning offered a significant increase in generality for unseen data. For the count-with-dense model, after tuning hyperparameters training accuracy went from 76.58\% to 64.68\%, and evaluation accuracy went from 41.81\% to 52.21\%.
+
+%The effectiveness of the count vector encoding was evaluated by the use of a dense and convolutional neural network, the structures of which have been discussed in the previous section. Recurrent and LSTM networks were not able to be evaluated for this encoding due to the processing time required for an encoding matrix of this size.
+%Although the size of this encoding made it slow for the neural networks to learn from, this encoding was able to classify the sentiment of phrases well.
+
+%The dense neural network achieved a training accuracy of 64.69\% and testing accuracy of 52.21\%. The testing accuracy is higher than some of the other methods and encodings used in this report, indicating that the model is able to classify sentiment well comparatively. This is reinforced by the confusion matrix displayed in figure \ref{fig:matrices} where an approximate diagonal band is shown. Although the correctly classified major diagonal axis of the confusion matrix isn't completely filled we see that the model is able to separate positive and negative phrases well but often classifies either as neutral. We also see that the model has difficulties classifying phrases with more 'extreme' sentiment (i.e. very negative and very positive) - this is something we observe in most models in this report.
+
+%Despite the model's classification ability, the large difference between the accuracies shows the model has  significantly overfitted the testing data. This is depicted through the shape of the loss curves in figure \ref{fig:matrices} where we observe a declining loss curve but increasing validation loss. 
+
+%For the count vector encoding, the convolutional neural network model was able to classify phrase sentiment well. It classified with 60.39\% accuracy on training data and 54.75\% on testing data.
+%https://www.overleaf.com/project/637df4cd85f1d84362595ced
+%In figure \ref{fig:matrices} we see the confusion matrix for the predicted classification shows an approximate diagonal band. As before, there is difficulty classifying 'extreme' sentiment but this model seems to classify neutral sentiment particularly well with 82\% of neutral phrases correctly classified.
+%When considering the loss curves we see little overtraining as both loss and validation loss functions seem to reduce with the epochs. This is expected due to the small difference between the accuracies. However, this model was only trained with 10 epochs due to the amount of time needed to complete an epoch, for a more complete evaluation of the overtraining and to remain consistent with the epochs used to train the other neural networks more epochs are required.
+
+%Classification accuracy and overtraining are both important measures to consider when evaluating the success of a model. For the count vector encoding, a convolutional model performs noticeably better than the densely connected network. Although the convolutional model has higher testing accuracy percentage than the densely connected model, no significant change despite the improvement in neutral phrase classification is seen between the confusion matrices (figure \ref{fig:matrices} and \ref{fig:matrices}). However, there is a significant reduction in overfitting which is apparent in the comparison plot of the loss curves depicted in figure \ref{fig:matrices}. We observe that the dense network loss curves are significantly further apart than the convolutions loss curves and seem to be continuing to diverge.
+
+% word2vec:Although these numbers are lower than expected, they are very close together. This indicates that there is very little overtraining which is demonstrated by the consistently close loss and validation loss curves portrayed in figure \ref{fig:matrices}.
+
+%However, the confusion matrix (figure \ref{fig:matrices}) does not display a diagonal pattern which is typical of a good classifier. Instead, almost all of the testing data is classified as either neutral or positive which is likely the cause of the low accuracy.
+% word2vec: However, despite the low accuracy, this encoding was the least overfitted by the models.
+% A Recurrent and LSTM neural network was also evaluated for the Word2Vec encoding to ensure that this was not a problem with the models and was a shortcoming in the encoding. All 4 models yielded low accuracy (between 46-48\%) and demonstrated 
+% However, all 4 methods had negligible overtraining as shown in figure \ref{fig:matrices}. The LSTM model demonstrated the least overtraining but the dense model had the highest accuracy. 
+
+\section{Discussion and Conclusion}
+Word2vec's poor performance has a few potential explanations. It has been shown to perform well in literature undertaking similar tasks, so what is going wrong? The corpora given, even the original snippets corpus, is majority made up short, standalone texts, each with a similar format. Thus, the model may not have been given enough, \textbf{varied} contextual data to be able to separate words by sentiment effectively. Future methods might entail training the Word2vec model on the dictionary data, instead of the original snippets - as its far greater population of words occurring 10 to 100 times might be improve the quality of the semantic embedding. In this case you would have markedly less contextual variation however. Finally, it is potentially during the very crude summing of the word vectors to create each phrase vector that a lot, if not all, semantic information gets lost. Potentially this operation is acting as a We suggest future research into more complex and effective ways to semantically embed sentences.
+
+Best method: CNN on TFIDF encoding 
+% BEST MODEL 
+As the accuracies of CNNs on the TF-IDF encoding and count vector encoding are very similar, their loss curves have been plotted on the same graph (\ref{fig:bestmodel}) to allow for comparison in overtraining to determine the best-performing method. Overall the count vector encoding has the highest testing accuracy (1.34\% higher) and least overtraining, as shown by the reduction in divergence of he loss curves when compared to the TF-IDF. However, both performances are comparable so in practical terms it may be more suitable to use the TF-IDF CNN as it's smaller encoded size is much quicker to run and yeilds a comparible result to the TF-IDF
+
+
+The most confident classifications lie inside the neutral and positive sentiment values and correspond to the trends in almost all confusion matrices. The lowest confidence results were found in the neutral and negative classifications. These models significantly struggled to map almost anything correctly into the very positive or very negative regions. The fact that both, the highest confidence and lowest confidence classifications, exist in the same class is not unusual; in fact, this indicates that the classes within the dataset are not well-defined, as can clearly be seen in figure \ref{fig:UMAP}. This leads to other classes being mislabeled as neutral.
+
+Some network structures are prone to overfitting, specifically dense networks. This can be optimized through a process where random of network nodes are cut, and regularisers are put in place to reduce the complexity and depth. This simplification prevents the overfitting of the networks allowing for more accurate results. Below is this optimization applied to a dense network on a count vector encoding. The effectiveness of this practice is seen in figure \ref{fig:overtrain} where we see a significant reduction in overtraining through the reduced amount of diversion in the loss curves.
+
+Besides editing the layers of the neural network, callbacks are an effective but to improve Keras models. These document the parameter values every epoch and return values which lead to the best fit of a model (ie find which epoch to stop at or which learning rate works best) \ref{chaudhary_2020}.
+
+\bibliography{refs.bib}
+\bibliographystyle{plain}
+
+
+\section{appendix}
+
+\begin{figure}[H]%{r}{0.4\textwidth}
+    \includegraphics[width=7cm]{bars.png}
+    \caption{barcharts for phrases sentiment}
+    \label{fig:appnedix0}
+\end{figure}
+
+\begin{figure}[H]%{r}{0.4\textwidth}
+    \includegraphics[width=7cm]{nnplots/tfifdvssparse.png}
+    \caption{TF-IDF CNN vs Count Vector CNN}
+    \label{fig:bestmodel}
+\end{figure}
+
+
+\begin{figure}[H]%{r}{0.4\textwidth}
+     \includegraphics[width=5cm]{nnplots/denseovertran.png}
+     \caption{Difference in loss over epoch when overtraining is reduced by utilising regularisers, dropouts and limiting the depth of the neural network. This is evaluated by applying a Dense Neural Network to a count vector encoding}
+     \label{fig:overtrain}
+\end{figure}
+
+The phrase-trained model, specifically the CNN on the count vector encoding, is scaled so it can classify sentence sentiments. To achieve this sentence data was preprocessed identically to the phrase data. The sentence was tokenized and fit to the original count vector matrix as it must have the same features as the encoded phrase data to be used by the previously trained CNN. Predictions were made by the model using this new matrix as input data. There are no sentiment labels to compare the CNN-predicted classification to, thus the sentence sentiment can only be quantified by the confidence of classification (probability) and by manually assessing the classification.
+
+
+\textbf{Highest confidence sentence classification}
+\begin{table}[H]
+\centering
+\begin{tabular}{lll}
+\textbf{confidence (\%)} & \textbf{sentiment} & \textbf{review}  
+\\
+99.73537            & Positive                 & Paid In Full is so stale, in fact, that its most... vibrant scene is one that uses clips from Bri... \\
+99.70266            & neutral                & Before it collapses into exactly the kind of buddy cop... comedy it set out to lampoon , anyway .      \\
+98.31885            & neutral                  & Full of witless jokes, dealing in broad stereotypes and... outrageously unbelievable scenarios , a... \\
+98.04558            & neutral                   & Rarely has a film's title served such dire warning.                                               \\
+97.99145            & neutral                & an 83 minute document of a project which started in a muddle , seesawed back...
+\end{tabular}
+\end{table}
+\textbf{Lowest confidence sentence classification}
+\begin{table}[H]
+\centering
+\begin{tabular}{lll}
+\textbf{confidence (\%)} & \textbf{sentiment} & \textbf{review}                                                                                     \\
+27.0120             & neutral                  & Baran is shockingly devoid of your typical Majid Majidi shoe-loving, crippled children.            \\
+27.06285            & neutral                 & Instead of building to a laugh riot we are left with a handful of disparate funny moments of no ... \\
+27.26628            & negative               & Don't let your festive spirit go this far.                                                          \\
+27.37083            & neutral                  & A true-blue delight.                                                                                \\
+27.59124            & negative                 & Lucy's a dull girl, that 's all.   
+\end{tabular}
+\end{table}
+
+
+\textbf{Loss curves: assessing overtraining}
+\begin{figure}[H]
+     \centering
+     \begin{subfigure}[b]{0.32\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{nnplots/sparsecomp.png}\hspace{0cm}
+         \caption{Count Array}
+     \end{subfigure}
+     \begin{subfigure}[b]{0.32\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{nnplots/tfcomp.png}\hspace{-0.1cm}
+         \caption{TF-IDF}
+     \end{subfigure}
+     \begin{subfigure}[b]{0.32\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{nnplots/w2vcomp.png}\hspace{-0.1cm}
+         \caption{Word2vec}
+     \end{subfigure}
+        \caption{Loss curves of the model performance on each encoding.}
+        \label{fig:loss}
+\end{figure}
+
+\end{document}
+
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
