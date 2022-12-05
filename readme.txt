@@ -4,4 +4,4 @@ Neural networks require the data_processing.ipynb in the same directory as well 
 
 Install following packages: word cloud, collections, numpy, pandas, nltk, seaborn, matplotlib.pyplot, random, re, tensorflow, keras, sklearn,
 
-Follow each notebook and results will be displayed in them.
+Start a jupyter notebooks server and follow each notebook and results will be displayed in them.
